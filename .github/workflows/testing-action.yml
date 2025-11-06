@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Install dependencies
         run: |
@@ -24,14 +24,14 @@ jobs:
       - name: Run tests
         run: |
           pytest
-
+          
   deploy:
     needs: Testing
     runs-on: windows-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Deploy application
-        run: Test
+        run: echo "Deployment successful!"
