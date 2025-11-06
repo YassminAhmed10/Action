@@ -11,7 +11,7 @@ on:
 
 jobs:
   Testing:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -27,7 +27,8 @@ jobs:
           
   deploy:
     needs: Testing
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+
 
     steps:
       - name: Checkout repository
